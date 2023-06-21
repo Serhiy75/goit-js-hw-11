@@ -1,10 +1,17 @@
 import Notiflix from 'notiflix';
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 
-const searchForm = document.querySelector('.search-form');
-const btn = 
+const refs = {
+  form: document.querySelector('.search-form'),
+  btnSubmit: document.querySelector('.submit'), 
   
-searchForm.addEventListener('submit', )
+  
+}
+
+refs.form.addEventListener('submit', handlerSubmit);
+refs.btnSubmit.addEventListener('click', handlerClick);
 
 
 
