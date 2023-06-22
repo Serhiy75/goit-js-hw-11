@@ -1,19 +1,15 @@
 import Notiflix from 'notiflix';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
-
 import { API } from './api.js';
 
 let lightbox = new SimpleLightbox('.gallery a') 
 
-
-
 const refs = {
   form: document.querySelector('.search-form'),
-  btnLoadmore: document.querySelector('.load-more'), 
+  btnLoadmore: document.querySelector('.load-more'),
   gallery: document.querySelector('.gallery'),
-  
-}
+};
 
 refs.form.addEventListener('submit', onFormSubmit);
 refs.btnLoadmore.addEventListener('click', onLoadmore);
@@ -27,7 +23,7 @@ async function onLoadmore() {
   else {
     const result = await API.getImages()
     if (result.totalHits === 0)
-      Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.")
+      Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
     else
     renderImages(result.hits)
   }
@@ -48,15 +44,14 @@ async function onFormSubmit(event) {
     Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.")
   else {
     renderImages(result.hits)
-    refs.btnLoadmore.classList.remove('hide');
+    refs.btnLoadmore.classList.remove('hide')
   }
 }
-
 
 function renderImages(images) {
   const markup = creatMarkup(images)
   refs.gallery.insertAdjacentHTML('beforeend', markup);
-  lightbox.refresh();
+  lightbox.refresh()
 }
 
 function creatMarkup(images) {
@@ -80,15 +75,6 @@ function creatMarkup(images) {
   </div>
 </div>`
   }).join('');
-}
+};
 
 
-{/* <form class="search-form" id="search-form">
-  <input
-    type="text"
-    name="searchQuery"
-    autocomplete="off"
-    placeholder="Search images..."
-  />
-  <button type="submit">Search</button>
-</form> */}
