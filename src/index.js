@@ -23,7 +23,7 @@ async function onLoadmore() {
   }
   else {
     const result = await API.getImages()
-    if (result.totalHits )
+    if (!result.totalHits )
       Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
     else
     renderImages(result.hits)
