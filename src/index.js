@@ -2,7 +2,6 @@ import Notiflix from 'notiflix';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 import { API } from './api.js';
-import axios from "axios";
 
 let lightbox = new SimpleLightbox('.gallery a') 
 
