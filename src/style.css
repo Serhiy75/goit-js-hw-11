@@ -31,9 +31,7 @@ display: none;
     justify-content: center;
     margin-bottom: 40px;
     margin-top: 40px;
-    
     height: 30px;
-    
 }
 .load-more{
     margin-left: 670px;
@@ -56,7 +54,7 @@ display: none;
 }
 .input{
     background-color: whitesmoke;
-    width: 350px;
+    width: 400px;
     border-radius: 6px;
     border-color: blueviolet;
     margin-right: 5px;
