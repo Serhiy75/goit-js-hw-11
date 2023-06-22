@@ -23,7 +23,7 @@ async function onLoadmore() {
   }
   else {
     const result = await API.getImages()
-    if (result.totalHits === 0)
+    if (result.totalHits )
       Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
     else
     renderImages(result.hits)
@@ -41,7 +41,7 @@ async function onFormSubmit(event) {
   refs.btnLoadmore.classList.add('hide');
   const result = await API.getImages()
     maxPage = result.totalHits / 40
-  if (result.totalHits === 0)
+  if (!result.totalHits)
     Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.")
   else {
     renderImages(result.hits)

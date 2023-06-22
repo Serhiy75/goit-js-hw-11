@@ -21,7 +21,7 @@ export const API = {
     const url = BAS_URL + End_POINT + Params;
 
     this.page += 1;
-    const res = await fetch(url)
-    return res.json();
+    const res = await axios.get(url)
+    return res.data;
   },
 };
