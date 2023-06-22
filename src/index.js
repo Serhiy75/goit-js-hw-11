@@ -57,20 +57,20 @@ function renderImages(images) {
 function creatMarkup(images) {
   return images.map((el) => {
     return `
-    <div class="photo-card">
+<div class="photo-card">
   <a href="${el.largeImageURL}" ><img src="${el.webformatURL}" alt="${el.tags}" loading="lazy" /></a>
   <div class="info">
-    <p class="info-item">
+    <p class="info info-item">
       <b>Likes</b>${el.likes}
     </p>
-    <p class="info-item">
+    <p class="info info-item">
       <b>Views</b>${el.views}
     </p>
-    <p class="info-item">
+    <p class="info info-item">
       <b>Comments</b>${el.comments}
     </p>
-    <p class="info-item">
-      <b>Downloads</b>${el.downloads}
+    <p class="info info-item">
+      <b> Downloads </b>${el.downloads}
     </p>
   </div>
 </div>`
