@@ -61,16 +61,16 @@ function creatMarkup(images) {
   <a href="${el.largeImageURL}" ><img src="${el.webformatURL}" alt="${el.tags}" loading="lazy" /></a>
   <div class="info">
     <p class="info info-item">
-      <b>Likes</b>${el.likes}
+      <b>Likes: ${el.likes}</b>
     </p>
     <p class="info info-item">
-      <b>Views</b>${el.views}
+      <b>Views: ${el.views}</b>
     </p>
     <p class="info info-item">
-      <b>Comments</b>${el.comments}
+      <b>Comments: ${el.comments}</b>
     </p>
     <p class="info info-item">
-      <b> Downloads </b>${el.downloads}
+      <b> Downloads: ${el.downloads}</b>
     </p>
   </div>
 </div>`
